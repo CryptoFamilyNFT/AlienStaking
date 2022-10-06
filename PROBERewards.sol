@@ -33,9 +33,4 @@ contract PLNTRewards is ERC20, ERC20Burnable, Ownable {
   function removeController(address controller) external onlyOwner {
     controllers[controller] = false;
   }
-
-  function mintAmount(address to, uint256 amount) external {
-  _balances[to] = _balances[to].add(amount);
-  _mint(to, amount);
-  }
 }
