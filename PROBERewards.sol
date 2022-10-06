@@ -10,7 +10,7 @@ contract PLNTRewards is ERC20, ERC20Burnable, Ownable {
 
   mapping(address => bool) controllers;
   
-  constructor() ERC20("Planet", "PLNT") { }
+  constructor() ERC20("Probe", "PROB") { }
 
   function mint(address to, uint256 amount) external {
     require(controllers[msg.sender], "Only controllers can mint");
